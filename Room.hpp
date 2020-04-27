@@ -5,7 +5,7 @@
 class Room {
  private:
     std::unique_ptr<Room> next_room_;
-    std::vector<Enigma> enigma_;
+    std::vector<Virtual_Enigma *> enigma_;
  public:
     Room();
     ~Room();

@@ -1,0 +1,4 @@
+compile/main_test_model.r.o: main_test_model.cpp Escape_room.hpp Room.hpp \
+ Enigma.hpp
+main_test_model.cpp Escape_room.hpp Room.hpp :
+ Enigma.hpp :

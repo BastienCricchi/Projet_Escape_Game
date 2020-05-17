@@ -837,7 +837,7 @@ compile/main_test_graphic_room.r.o: main_test_graphic_room.cpp \
  /usr/include/gtkmm-3.0/gtkmm/entrybuffer.h \
  /usr/include/gtkmm-3.0/gtkmm/box.h \
  /usr/include/gtkmm-3.0/gtkmm/orientable.h \
- /usr/include/gtkmm-3.0/gtkmm/hvbox.h Watcher.hpp
+ /usr/include/gtkmm-3.0/gtkmm/hvbox.h Watcher.hpp GraphicWall.hpp
 main_test_graphic_room.cpp :
  /usr/include/gtkmm-3.0/gtkmm/application.h :
  /usr/lib/x86_64-linux-gnu/gtkmm-3.0/include/gtkmmconfig.h :
@@ -1677,4 +1677,4 @@ main_test_graphic_room.cpp :
  /usr/include/gtkmm-3.0/gtkmm/entrybuffer.h :
  /usr/include/gtkmm-3.0/gtkmm/box.h :
  /usr/include/gtkmm-3.0/gtkmm/orientable.h :
- /usr/include/gtkmm-3.0/gtkmm/hvbox.h Watcher.hpp :
+ /usr/include/gtkmm-3.0/gtkmm/hvbox.h Watcher.hpp GraphicWall.hpp :

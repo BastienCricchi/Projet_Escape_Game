@@ -9,25 +9,26 @@
 
 class Room {
  private:
-  Room *next_room_;
-  //std::unique_ptr<Room> next_room_;
+  // Room *next_room_;
   std::vector<Virtual_Enigma *> enigmas_;
  public:
-  Room(Room* next_room_ptr, std::vector<Virtual_Enigma *> enigma_vector): 
-  next_room_{next_room_ptr},
-  enigmas_{enigma_vector}
+  Room(): 
   {
     // Initialiser les enigmes
   };
   ~Room();
 
-  void set_next_room(Room *next_room_ptr){
-    next_room_ = next_room_ptr; 
-  }
+  // void set_next_room(Room *next_room_ptr){
+  //   next_room_ = next_room_ptr; 
+  // }
 
-  Room* get_next_room(){
-    return next_room_;
-  } 
+  // Room* get_next_room(){
+  //   return next_room_;
+  // } 
+
+  Virtual_Enigma* get_enigma(int enigma_id){
+      return enigma_[enigma_id];  
+  }
 
   bool is_cleared(){
     for(auto&& enigma : enigmas_)
@@ -35,3 +36,5 @@ class Room {
     return true;
   }
 };
+
+

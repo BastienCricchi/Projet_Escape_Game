@@ -36,6 +36,7 @@ class Enigma: public Virtual_Enigma {
 };
 
 
+//Modèle singleton
 class Enigma_1_1 : public Enigma<std::string,std::string,std::string>
 {
 private:
@@ -45,7 +46,7 @@ private:
     "Bien joué"
   } {};
 
-  Enigma_1_1(Enigma_1_1 const&);              // Don't Implement
+  Enigma_1_1(Enigma_1_1 const&);     // Don't Implement
   void operator=(Enigma_1_1 const&); // Don't implement
 
 public:
@@ -76,31 +77,3 @@ public:
     return &instance;
   }
 };
-
-// class Enigma_Textual: public Enigma<std::string,std::string>
-// {
-// private:
-//   std::string riddle_;
-
-//  public:
-//   Enigma_Textual(std::string riddle, std::string key, std::string result):
-//    Enigma(key, result),
-//    riddle_{riddle}
-//    {}
-//   ~Enigma_Textual() = default;
-  
-// };
-
-// Virtual_Enigma* enigma_text_1_1 = new Enigma_Textual(
-//   "Plus je suis chaud, plus je suis frais...\n Que suis-je ?",
-//   "pain",
-//   "Bien joué"
-// );
-
-// Virtual_Enigma* enigma_text_2_1 = new Enigma_Textual(
-//   "Mon premier se trouve en abondance dans la nourriture de fast food\n"
-//   "Mon second est au milieu de ton visage\n"
-//   "Mon tout est un professeur de C++",
-//   "granet",
-//   "Bien joué"
-// );

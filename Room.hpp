@@ -8,26 +8,18 @@
 // -Quentin 
 
 class Room {
- private:
-  // Room *next_room_;
-  std::vector<Virtual_Enigma *> enigmas_;
+ protected:
+  // std::vector<Virtual_Enigma *> enigmas_;
+  std::vector<Enigma<std::string,std::string,std::string> *> enigmas_;
  public:
-  Room(): 
-  {
-    // Initialiser les enigmes
-  };
-  ~Room();
+  Room(){};
 
-  // void set_next_room(Room *next_room_ptr){
-  //   next_room_ = next_room_ptr; 
+  // Virtual_Enigma* get_enigma(int enigma_id){
+  //     return enigmas_[enigma_id];  
   // }
 
-  // Room* get_next_room(){
-  //   return next_room_;
-  // } 
-
-  Virtual_Enigma* get_enigma(int enigma_id){
-      return enigma_[enigma_id];  
+  Enigma<std::string,std::string,std::string>* get_enigma(int enigma_id){
+      return enigmas_[enigma_id];  
   }
 
   bool is_cleared(){
@@ -37,4 +29,36 @@ class Room {
   }
 };
 
+class Room_1: public Room
+{
+private:
+  Room_1(){
+    enigmas_.push_back(Enigma_1_1::get_instance());
+  }
+  Room_1(Room_1 const&);     // Don't Implement
+  void operator=(Room_1 const&); // Don't implement
 
+public:
+  static Room_1* get_instance(){
+    static Room_1 instance;
+    return &instance;
+  }
+
+};
+
+class Room_2: public Room
+{
+private:
+  Room_2(){
+    enigmas_.push_back(Enigma_1_2::get_instance());
+  }
+  Room_2(Room_2 const&);     // Don't Implement
+  void operator=(Room_2 const&); // Don't implement
+
+public:
+  static Room_2* get_instance(){
+    static Room_2 instance;
+    return &instance;
+  }
+
+};

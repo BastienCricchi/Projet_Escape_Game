@@ -2,28 +2,25 @@
 
 #include <vector>
 #include "Room.hpp"
-#define NUMBER_OF_ROOMS 3 
-
-
-Room *room1, *room2;
 
 class Escape_room {
  private:
-  std::vector<Room> rooms_ ;
-  Room* current_room_;
+  std::vector<Room*> rooms_ ;
+  std::vector<Room*>::iterator current_room_;
  public:
   Escape_room(){
-    std::vector<Virtual_Enigma *> enigmas_room_1 = {enigma_text_1_1};
-    std::vector<Virtual_Enigma *> enigmas_room_2 = {enigma_text_2_1};
-
-    rooms_.reserve(NUMBER_OF_ROOMS);
-    rooms.emplace_back()
-
-    room1 = new Room(room2, enigmas_room_1);
-    room2 = new Room(NULL, enigmas_room_2);
-
+    rooms_.push_back(Room_1::get_instance());
+    rooms_.push_back(Room_2::get_instance());
+    current_room_ = rooms_.begin();
   }
-  ~Escape_room(){
-    delete room1,room2;
-  };
+  ~Escape_room() = default;
+
+  Room* get_current_room(){
+    return *current_room_;
+  }
+
+  void next_room(){
+    if (current_room_ != rooms_.end())
+     current_room_++;
+  }
 };

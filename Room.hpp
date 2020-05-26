@@ -10,9 +10,9 @@
 class Room {
  private:
   // Room *next_room_;
-  std::vector<Virtual_Enigma *> enigmas_;
+  std::vector<VirtualEnigma *> enigmas_;
  public:
-  Room(): 
+  Room()
   {
     // Initialiser les enigmes
   };
@@ -26,15 +26,15 @@ class Room {
   //   return next_room_;
   // } 
 
-  Virtual_Enigma* get_enigma(int enigma_id){
-      return enigma_[enigma_id];  
-  }
+  // VirtualEnigma* get_enigma(int enigma_id){
+  //     return enigma_[enigma_id];  
+  // }
 
-  bool is_cleared(){
-    for(auto&& enigma : enigmas_)
-      if (!enigma->resolved()) return false;
-    return true;
-  }
+  // bool is_cleared(){
+  //   for(auto&& enigma : enigmas_)
+  //     if (!enigma->resolved()) return false;
+  //   return true;
+  // }
 };
 
 

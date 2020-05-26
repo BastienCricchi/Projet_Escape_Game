@@ -5,9 +5,9 @@
 class ControlEnigma {
  private:
     GraphicTextEnigma *vue_;
-    Enigma_Textual *model_;
+    Enigma<std::string,std::string,std::string> *model_;
  public:
-    ControlEnigma(Enigma_Textual *model, GraphicTextEnigma *vue):
+    ControlEnigma(Enigma<std::string,std::string,std::string> *model, GraphicTextEnigma *vue):
         vue_{vue}, model_{model} {
         vue_->set_listener(std::bind(&ControlEnigma::try_key, this));
     }

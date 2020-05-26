@@ -15,8 +15,8 @@ class GraphicWall: public Gtk::Box{
     GraphicWall(int id): Gtk::Box(Gtk::ORIENTATION_HORIZONTAL) {
     }
     
-    void populate(GraphicTextEnigma graph_enigma_text) {
-        add(graph_enigma_text);
+    void addEnigma(GraphicTextEnigma *graph_enigma_text) {
+        add(*graph_enigma_text);
         show_all_children();
     }
 };

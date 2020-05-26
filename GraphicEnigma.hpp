@@ -43,7 +43,7 @@ class GraphicTextEnigma: public GraphicEnigma<string, string, string> {
                     box_button_(Gtk::ORIENTATION_HORIZONTAL),
                     try_("Try answer") {
 
-        // set_size_request(200, 50);
+        set_size_request(800, 50);
         txt_riddle_.set_text(riddle);
         txt_answer_.set_text("");
         // txt_answer_.select_region(0, txt_answer_.get_text_length());

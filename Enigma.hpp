@@ -26,8 +26,6 @@ class Enigma: public VirtualEnigma, public Watched<R> {
 
     //void set_key(K k) { key_ = k;}
     
-    // Dans cette fonction, l'enigme devrait notifier ses observers du resultat
-    // -Q
     bool try_key(K k) {
         if (k == key_) {
           this->notif_watchers(result_);
@@ -46,7 +44,7 @@ class Enigma_1_1 : public Enigma<std::string,std::string,std::string>
 {
 private:
   Enigma_1_1(): Enigma{
-    "Plus je suis chaud, plus je suis frais...\n Que suis-je ?",
+    "Plus je suis chaud, plus je suis frais... Que suis-je ?",
     "pain",
     "Bien joué"
   } {};

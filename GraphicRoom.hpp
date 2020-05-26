@@ -69,4 +69,7 @@ class GraphicRoom: public Gtk::Window {
             }
         }
     }
+    GraphicWall& wall(int id) {
+        return walls_[id];
+    }
 };

@@ -14,19 +14,16 @@ class Room {
  public:
   Room(){};
 
-  // Virtual_Enigma* get_enigma(int enigma_id){
-  //     return enigmas_[enigma_id];  
-  // }
 
   Enigma<std::string,std::string,std::string>* get_enigma(int enigma_id){
       return enigmas_[enigma_id];  
   }
 
-  bool is_cleared(){
-    for(auto&& enigma : enigmas_)
-      if (!enigma->resolved()) return false;
-    return true;
-  }
+  // bool is_cleared(){
+  //   for(auto&& enigma : enigmas_)
+  //     if (!enigma->resolved()) return false;
+  //   return true;
+  // }
 };
 
 class Room_1: public Room

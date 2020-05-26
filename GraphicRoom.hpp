@@ -32,7 +32,7 @@ class GraphicRoom: public Gtk::Window {
 
         box_.pack_start(go_left_);
 
-        // walls_.reserve(4);
+        walls_.reserve(4);
         for (int i = 0; i < 4; ++i){
             walls_.push_back(GraphicWall(i));
             walls_[i].set_size_request(1000, 500);
@@ -68,5 +68,8 @@ class GraphicRoom: public Gtk::Window {
                 break;
             }
         }
+    }
+    GraphicWall& wall(int id) {
+        return walls_[id];
     }
 };
